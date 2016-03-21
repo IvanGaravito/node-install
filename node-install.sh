@@ -11,6 +11,7 @@ function usage {
   echo "                  * USR    install it to /usr"
   echo "                  * LOCAL  install it to /usr/local"
   echo "binary-package  /path/to/node-<version>-<platform>-<arch>.tar.gz"
+  echo "                /path/to/node-<version>-<platform>-<arch>.tar.xz"
   echo
 }
 
@@ -57,4 +58,4 @@ else
 fi
 PACKAGE_FILE="$PACKAGE_FILE/$(basename $NODE_PACKAGE)"
 
-cd $INSTALL_PATH && tar --strip-components 1 -xzf $PACKAGE_FILE
+cd $INSTALL_PATH && tar --strip-components 1 -xf $PACKAGE_FILE
