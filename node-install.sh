@@ -58,4 +58,4 @@ else
 fi
 PACKAGE_FILE="$PACKAGE_FILE/$(basename $NODE_PACKAGE)"
 
-cd $INSTALL_PATH && tar --strip-components 1 -xf $PACKAGE_FILE
+cd $INSTALL_PATH && tar --no-same-owner --strip-components 1 -xf $PACKAGE_FILE
